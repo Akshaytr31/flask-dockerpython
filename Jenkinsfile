@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'docker build --tag python-docker .' 
+                sh 'docker build --tag akshaytr123/flask-dockerpython .' 
             }
         }
     }
