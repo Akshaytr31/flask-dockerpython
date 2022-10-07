@@ -12,12 +12,12 @@ pipeline {
         }
         stage('Login to dockerhub') {
             steps {
-                sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin’
+                sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
             }
         }
         stage('push image') {
             steps {
-                sh 'docker push jishnujoshy/pythonapp’
+                sh 'docker push akshaytr123/flask-dockerpython'
             }
         }
     }
