@@ -12,7 +12,7 @@ pipeline {
         }
         stage('push') {
             steps {
-                sh 'docker push akshaytr123/flask-dockerpython'
+                sh 'docker push akshaytr123/flask-dockerpython:latest'
             }
                     
         }
