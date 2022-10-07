@@ -10,6 +10,12 @@ pipeline {
                 sh 'docker build --tag akshaytr123/flask-dockerpython .'
             }
         }
+	stage('Login') {
+
+	steps {
+		sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+	     }
+	}
         stage('push') {
             steps {
                 sh 'docker push akshaytr123/flask-dockerpython:1.1'
