@@ -2,8 +2,7 @@ pipeline {
     agent any
 	
     environment {
-        DOCKERHUB_CREDENTIALS = credentials('7b81671e-bd25-40fb-aa2b-b001a0226648')
-	KUBERNETES_CREDENTIALS = credentials('c3783aed-5a5a-4eb6-a718-0098991b5471')    
+        DOCKERHUB_CREDENTIALS = credentials('7b81671e-bd25-40fb-aa2b-b001a0226648')   
     }
     stages {
         stage('Build') {
@@ -23,7 +22,7 @@ pipeline {
         }
 	stage('Deploying the appto kubernetes') {
             steps {
-                sh 'kubectl apply -f deploymentservice.yml'
+                sh 'kubectl apply -f deploymentservice.yml' kubeconfigid:| '5fcb4580-e2bb-47aa-96bc-16466402fc92'
 	    }
 	}
     }
