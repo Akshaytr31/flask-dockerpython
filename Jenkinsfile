@@ -22,13 +22,13 @@ pipeline {
         }
 	stage('Deploying the appto kubernetes') {
             steps {
-                script {
-                    kubernetesDeploy(configs: "deploymentservice.yml", kubeconfigid:| "c3783aed-5a5a-4eb6-a718-0098991b5471")
-                }
-            }
+                sh 'kubectl apply -f deploymentservice.yml'
+	    }
 	}
     }
 }
+			    
+                
 	
     
 
