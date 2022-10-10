@@ -4,8 +4,15 @@ metadata:
   name: staging
   
 ---
-
-
+apiVersion: v1
+kind: Secret
+metadata:
+  name: regcred
+  namespace: staging
+data:
+  .dockerconfigjson: eyJhdXRocyI6eyJmbGFzay1kb2NrZXJweXRob24iOnsidXNlcm5hbWUiOiJha3NoYXkxMjMiLCJwYXNzd29yZCI6Ijc5OTQyMjI1OTQiLCJlbWFpbCI6ImFrc2hheXRyMzFAZ21haWwuY29tIiwiYXV0aCI6IllXdHphR0Y1TVRJek9qYzVPVFF5TWpJMU9UUT0ifX19
+type: kubernetes.io/dockerconfigjson
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
