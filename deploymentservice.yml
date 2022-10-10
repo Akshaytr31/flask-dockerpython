@@ -40,7 +40,7 @@ metadata:
 spec:
   selector:
     app: akshaytr123/flask-dockerpython 
-  type: LoadBalancer
+  type: NodePort
   ports:
   - protocol: TCP
     port: 5000
