@@ -22,7 +22,7 @@ pipeline {
         }
 	stage('Deploying the appto kubernetes') {
             steps {
-                sh 'kubectl apply -f deploymentservice.yml'
+                script.sh 'kubectl apply -f deploymentservice.yml'
 	    }
 	}
     }
