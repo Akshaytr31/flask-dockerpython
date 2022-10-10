@@ -12,22 +12,22 @@ metadata:
   name: flask-dockerpython
   namespace: Development
   labels:
-    app: akshaytr123/flask-dockerpython
+    app: flask-dockerpython
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: akshaytr123/flask-dockerpython
+      app: flask-dockerpython
   template:
     metadata:
       labels:
-        app: akshaytr123/flask-dockerpython
+        app: flask-dockerpython
     spec:
       containers:
-      - name: nodeserver
+      - name: dockerpythonserver
         image: akshaytr123/flask-dockerpython:latest
         ports:
-        - containerPort: 3000
+        - containerPort: 5000
         
         
 ---
@@ -35,11 +35,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: akshaytr123/flask-dockerpython-service
+  name: flask-dockerpython-service
   namespace: kubernetes
 spec:
   selector:
-    app: akshaytr123/flask-dockerpython 
+    app: flask-dockerpython 
   type: NodePort
   ports:
   - protocol: TCP
