@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: Development
+  name: development
   
 ---
 
@@ -10,7 +10,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: flask-dockerpython
-  namespace: Development
+  namespace: development
   labels:
     app: flask-dockerpython
 spec:
@@ -36,7 +36,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: flask-dockerpython-service
-  namespace: kubernetes
+  namespace: development
 spec:
   selector:
     app: flask-dockerpython 
