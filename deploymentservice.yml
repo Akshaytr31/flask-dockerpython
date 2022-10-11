@@ -35,6 +35,8 @@ spec:
         image: akshaytr123/flask-dockerpython:latest
         ports:
         - containerPort: 5000
+      imagePullSecrets:
+      - name: regcred
         
         
 ---
