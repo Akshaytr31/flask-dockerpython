@@ -10,8 +10,8 @@ metadata:
   name: regcred
   namespace: staging
 data:
-  .dockerconfigjson: eyJhdXRocyI6eyJmbGFzay1kb2NrZXJweXRob24iOnsidXNlcm5hbWUiOiJha3NoYXkxMjMiLCJwYXNzd29yZCI6Ijc5OTQyMjI1OTQiLCJlbWFpbCI6ImFrc2hheXRyMzFAZ21haWwuY29tIiwiYXV0aCI6IllXdHphR0Y1TVRJek9qYzVPVFF5TWpJMU9UUT0ifX19
-type: kubernetes.io/dockerconfigjson
+  .dockerconfigjson:ewoJImF1dGhzIjogewoJCSJodHRwczovL2luZGV4LmRvY2tlci5pby92MS8iOiB7CgkJCSJhdXRo
+IjogIllXdHphR0Y1ZEhJeE1qTTZOems1TkRJeU1qVTVOQT09IgoJCX0KCX0KfQ==
 ---
 apiVersion: apps/v1
 kind: Deployment
