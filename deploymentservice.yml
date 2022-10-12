@@ -21,7 +21,7 @@ metadata:
   labels:
     app: flask-dockerpython
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: flask-dockerpython
@@ -54,4 +54,3 @@ spec:
   - protocol: TCP
     port: 5000
     targetPort: 5000
-    nodePort: 
